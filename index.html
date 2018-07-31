@@ -7,6 +7,7 @@
   <title>Verti RWD</title>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
   <link href="css/main.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script type="text/javascript" src="js/app.js"></script>
 </head>
 
@@ -15,15 +16,14 @@
   <!--  Header section-->
 
   <header id="header">
-<!--    <i id="menu-trigger" class="fa fa-bars"></i>-->
-   
-   <div id="menu-trigger">
+
+    <!--   "hamburger" menu-->
+    <div id="menu-trigger">
       <span></span>
       <span></span>
       <span></span>
     </div>
-   
-   
+
     <div class="container">
       <div class="header">
         <div class="brand">
@@ -34,11 +34,17 @@
 
         <nav>
           <div class="nav-items">
-            <li class="nav-item"><a href="">Welcome</a></li>
-            <li class="nav-item"><a href="#">Dropdown</a></li>
-            <li class="nav-item"><a href="#">Left Sidebar</a></li>
-            <li class="nav-item"><a href="#">Right Sidebar</a></li>
-            <li class="nav-item"><a href="#">No Sidebar</a></li>
+            <li class="nav-item"><a href="#banner">Welcome</a></li>
+            <li class="nav-item drop"><a href="#">Dropdown</a>
+              <ul class="dropdown">
+                <li><a href="">First</a></li>
+                <li><a href="">Second</a></li>
+                <li><a href="">Third</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a href="#features">Features</a></li>
+            <li class="nav-item"><a href="#content">About Us</a></li>
+            <li class="nav-item"><a href="#contact">Contact Us</a></li>
           </div>
         </nav>
       </div>
@@ -192,7 +198,7 @@
 
           <!--         Contact box-->
 
-          <div class="contact">
+          <div id="contact" class="contact">
             <h3>Contact Us</h3>
             <div class="social_icons">
               <a href="#"><i class="social_icon fab fa-twitter"></i></a>

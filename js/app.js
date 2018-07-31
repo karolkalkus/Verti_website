@@ -3,8 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var menu = document.querySelector('.nav-items');
   var toogle = document.getElementById('menu-trigger');
   var brand = document.querySelector('.brand');
-  var menuLi = document.querySelectorAll('.nav-item a');
-
+  var menuLi = document.querySelectorAll('.nav-item>a');
 
   if (toogle) {
     toogle.addEventListener('click', function (e) {
@@ -25,19 +24,19 @@ document.addEventListener('DOMContentLoaded', function () {
       this.style.color = '#444444';
     });
   });
+  
+  $('a[href^="#"]').on('click', function(event) {
+    var target = $(this.getAttribute('href'));
+    if( target.length ) {
+        event.preventDefault();
+        $('html, body').stop().animate({
+            scrollTop: target.offset().top
+        }, 1500);
+    }
+});
 
 });
 
 
-//
-//$('a[href^="#"]').on('click', function (event) {
-//
-//  var target = $(this.getAttribute('href'));
-//
-//  if (target.length) {
-//    event.preventDefault();
-//    $('html, body').stop().animate({
-//      scrollTop: target.offset().top
-//    }, 1000);
-//  }
-//});
+
+
